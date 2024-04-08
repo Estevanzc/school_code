@@ -1,0 +1,36 @@
+<?php
+require_once("Midia.php");
+require_once("Ator.php");
+require_once("Personagem.php");
+require_once("Obra.php");
+require_once("Filme.php");
+require_once("Episodio.php");
+require_once("Temporada.php");
+require_once("Serie.php");
+require_once("EstatisticasDeSeries.php");
+$actor0 = new Ator("fulano", 35, "USA");
+$actor1 = new Ator("ciclano", 35, "USA");
+$actor2 = new Ator("deutrano", 35, "USA");
+$person0 = new Personagem("fulano", $actor0, true, "random_desc");
+$person1 = new Personagem("ciclano", $actor1, true, "random_desc");
+$person2 = new Personagem("deutrano", $actor2, false, "random_desc");
+$movie0 = new Filme("obra[0]", $person0, 3600, 10, "action");
+$movie1 = new Filme("obra[1]", $person1, 3600, 10, "action");
+$movie2 = new Filme("obra[2]", $person2, 3600, 10, "action");
+$ep0 = new Episodio(0, "ep[0]", 3600);
+$ep1 = new Episodio(1, "ep[1]", 3600);
+$season0 = new Temporada(0, 10, $ep0);
+$season0->addEpisodio(2, "ep[2]", 3600);
+$serie0 = new Serie("obra[0]", $person0, $season0);
+$serie0->addPersonagem($person1);
+$movie0->addPersonagem($person1);
+$serie0->addPersonagem($person2);
+$movie0->addPersonagem($person2);
+$serie0->addTemporada(1, 10, $ep0);
+$serie0->addTemporada(2, 10, $ep1);
+echo "resultado de obter_nota() em filme => " . $movie0->obterNota() . "</br>";
+echo "resultado de obter_nota() em serie => " . $serie0->obterNota() . "</br>";
+echo "resultado de obterDuracaoTotalDaSerie() em EstatisticasDeSeries => " . EstatiscasDeSeries::obterDuracaoTotalDaSerie($serie0) . "</br>";
+echo "resultado de obterTotalDeEpisodios() em EstatisticasDeSeries => " . EstatiscasDeSeries::obterTotalDeEpisodios($serie0) . "</br>";
+echo "resultado de obterPaisesAtoresPersonagens() em EstatisticasDeSeries => " . print_r(EstatiscasDeSeries::obterPaisesAtoresPersonagens($serie0)) . "</br>";
+?>
