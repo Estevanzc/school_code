@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corrida_radical</title>
+    <link rel="icon" href="https://i.pinimg.com/474x/fe/4d/b4/fe4db4e341a3a96c42b44d96206b2311.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="menu_screen">
+        <div id="menu_top">
+            <div>corrida_radical</div>
+        </div>
+        <div id="menu_center">
+            <div>
+                <label for="mode_sel">Modo de Jogo</label>
+                <select id="mode_sel">
+                    <option value="0" selected>Radicais Gregos</option>
+                    <option value="1">Radicais Latinos</option>
+                    <option value="2">Prefixos Gregos</option>
+                    <option value="3">Prefixos Latinos</option>
+                </select>
+            </div>
+            <div>
+                <label for="diff_sel">Dificuldade</label>
+                <select id="diff_sel">
+                    <option value="60">Díficil</option>
+                    <option value="90">Médio</option>
+                    <option value="150" selected>Fácil</option>
+                </select>
+            </div>
+        </div>
+        <div id="menu_bottom">
+            <div id="menu_start" onclick="open_menu(this)">Continue</div>
+        </div>
+    </div>
+    <div id="main_screen">
+        <div id="top_info">
+            <div>corrida_radical</div>
+        </div>
+        <div id="bottom_info">
+            <div id="left_info" class="side_info"></div>
+            <div id="center_info">
+                <div id="game_screen">
+                    <div id="gs_top">
+                        <div id="main_word">
+                            <div id="mw_word">
+                                <div>Onomatopeia</div>
+                            </div>
+                            <div id="mw_desc">
+                                <div id="md_left">
+                                    <div><strong>Consoantes:</strong> 00</div>
+                                    <div><strong>Vogais:</strong> 00</div>
+                                </div>
+                                <div id="md_right">
+                                    <div><strong>Dificuldade:</strong> Fácil</div>
+                                    <div><strong>Modo:</strong> Radicais Gregos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gs_center">
+                        <input type="text" id="type_input" onkeyup="word_type(this, event)" disabled
+                            placeholder="digite a palavra">
+                    </div>
+                    <div id="gs_bottom">
+                        <div id="past_word">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="buttons_menu">
+                    <div id="start_button" onclick="start_game(this)">Começar</div>
+                    <div id="menu_button" onclick="open_menu(this)">Menu Principal</div>
+                </div>
+            </div>
+            <div id="right_info" class="side_info">
+                <div id="game_clock">
+                    <div id="clock_min">00</div>
+                    <div>:</div>
+                    <div id="clock_sec">00</div>
+                    <div>:</div>
+                    <div id="clock_mil">00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="final_screen">
+        <div id="fs_top">
+            <div id="final_title">corrida_radical</div>
+        </div>
+        <div id="fs_center">
+            <div id="final_info">Parabéns! Você acertou [14/14] <strong>Radicais Gregos</strong></div>
+            <div id="final_clock">
+                <div id="final_min">00</div>
+                <div>:</div>
+                <div id="final_sec">00</div>
+                <div>:</div>
+                <div id="final_mil">00</div>
+            </div>
+        </div>
+        <div id="fs_bottom">
+            <div id="final_menu" onclick="open_menu(this)">Menu Principal</div>
+            <div id="final_start" onclick="open_menu(this)">Recomeçar</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
