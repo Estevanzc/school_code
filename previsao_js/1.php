@@ -16,11 +16,13 @@ foreach ($return->cidade as $city) {
     $name = preg_replace('/[^A-Za-z0-9 ]/', '', $name);
     if ($name == $city_name) {
         $city_code = (int) $city->id;
-        break;
+        return;
     }
 }
 $data = new Request($city_code, "XML");
 $data_info = $data->execute();
+echo("<pre>");
+print_r($data);/*
 foreach ($data_info->previsao as $day_data) {
     echo ("
     <p><strong>Previsão para o dia " . $day_data->dia . ":</strong></p>
@@ -30,4 +32,4 @@ foreach ($data_info->previsao as $day_data) {
     </ul>
     <br>
     ");
-}
+}*/
