@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#back_ground {
+    height: 100vh;
+    background-image: url("https://wallpaper.forfun.com/fetch/2f/2f766794c0f8bd69766668ee760953a1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+}
+#login_window {
+    width: 35%;
+    height: 60%;
+    backdrop-filter: blur(5px);
+}
