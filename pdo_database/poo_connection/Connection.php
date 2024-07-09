@@ -18,8 +18,8 @@ final class Connection {
         $statement = $this->connection->prepare($query);
         foreach ($binds as $bind_name => $bind) {
             $statement->bindValue(":$bind_name", $bind);
-            return $statement->execute();
         }
+        return $statement->execute();
     }
     public function getLastInsertId() {
         return $this->connection->lastInsertId();

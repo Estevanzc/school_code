@@ -17,6 +17,7 @@
                 <th>Ano</th>
                 <th>Placa</th>
                 <th>Cor</th>
+                <th colspan="2">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +34,8 @@
                         <td>$carro[3]</td>
                         <td>$carro[4]</td>
                         <td>$carro[5]</td>
+                        <td><a href=\"2.php?id=$carro[0]\">Update</a></td>
+                        <td><a href=\"4.php?id=$carro[0]\">Delete</a></td>
                     </tr>
                     ");
                 }
