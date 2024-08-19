@@ -1,60 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TailLoja</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <div class="w-screen h-screen flex justify-start items-center flex-col">
-        <nav class="fixed w-full h-16 flex justify-center items-center text-white bg-zinc-600 select-none shadow-2xl">
+<body class="p-0 m-0">
+    <section id="first_screen" class="z-0 absolute w-screen h-screen flex justify-start items-center flex-col overflow-auto">
+        <header class="z-10 fixed w-full h-14 flex justify-evenly items-center text-white bg-[#394B5E] shadow-md drop-shadow-md">
             <div class="w-3/12 h-full flex justify-center items-center">
-                <div class="flex justify-center items-center text-xl gap-x-2 cursor-pointer">
-                    <div class="text-4xl font-bold">TI</div>
-                    <div class="font-bold">|</div>
-                    <div class="">TailLoja.com</div>
+                <a href="index.html" class="flex justify-center items-center gap-x-3 cursor-pointer">
+                    <div class="text-3xl font-bold">TI</div>
+                    <div class="text-2xl">|</div>
+                    <div class="text-xl font-bold">Tailloja</div>
+                </a>
+            </div>
+            <div class="w-5/12 h-full flex justify-center items-center gap-x-3">
+                <a href="index.html" class="py-1 flex justify-center items-center transition-all opacity-100 hover:opacity-100 active:opacity-60 cursor-pointer">
+                    <div class="px-2 h-full flex justify-center items-center font-bold">Home</div>
+                </a>
+                <a href="about.html" class="py-1 flex justify-center items-center transition-all opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer">
+                    <div class="px-2 h-full flex justify-center items-center font-bold">Sobre nós</div>
+                </a>
+                <a href="products.html" class="py-1 flex justify-center items-center transition-all opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer">
+                    <div class="px-2 h-full flex justify-center items-center font-bold">Nosso Acervo</div>
+                </a>
+            </div>
+            <div class="w-3/12 h-full flex justify-center items-center gap-x-3">
+                <div class="w-10 h-10 flex justify-center items-center bg-white text-[#394B5E] text-xl rounded-3xl shadow-md drop-shadow-md border-2 border-solid border-gray-500 transition-all cursor-pointer active:bg-[#394B5E]">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="w-6/12 h-10 flex justify-center items-center bg-white rounded-3xl shadow-md drop-shadow-md border-2 border-solid border-gray-500 transition-all cursor-pointer active:bg-[#394B5E]">
+                    <div class="w-3/12 h-full flex justify-center items-center">
+                        <div class="w-8 h-8 rounded-full shadow-md drop-shadow-md bg-center bg-no-repeat bg-cover bg-[url(https://img.freepik.com/premium-photo/duck-is-standing-white-background-with-white-background_867452-8708.jpg)]"></div>
+                    </div>
+                    <div class="w-6/12 h-full flex justify-center items-center text-[#394B5E] drop-shadow-md font-bold">
+                        Seu Perfil
+                    </div>
+                    <div class="w-3/12 h-full flex justify-center items-center">
+                        <div class="w-6 h-6 flex justify-center items-center rounded-full bg-[#394B5E]">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-6/12 h-full flex justify-center items-center">
-                <div class="w-3/12 h-full flex justify-center items-center"></div>
-                <div class="w-6/12 h-full flex justify-center items-center gap-x-5">
-                    <div class="h-7 px-1 flex justify-center items-center rounded cursor-pointer transition-all hover:bg-zinc-500 active:bg-zinc-400">
-                        <div class="w-8 h-full flex justify-center items-center">
-                            <i class="fa-solid fa-house"></i>
+        </header>
+        <main class="w-full min-h-screen flex justify-center items-center bg-center bg-no-repeat bg-cover bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/home/image_text/it_home_government_20191106.jpg)]">
+            <div class="w-full h-full flex justify-center items-center bg-[rgba(57,75,94,0.75)]">
+                <div class="w-1/2 h-full flex justify-center items-center flex-col pt-14 text-white">
+                    <div class="w-full h-2/6 flex justify-center items-start flex-col font-bold gap-y-4">
+                        <div class="w-full flex justify-start items-center text-7xl pl-10">
+                            <p class="drop-shadow-md text-[#2374CB]">Tail</p>
+                            <p class="drop-shadow-md text-[#80A9D2]">loja.com</p>
                         </div>
-                        <div class="px-1 h-full flex justify-center items-center">Home</div>
+                        <p class="drop-shadow-md pl-10">Monte sua casa apenas com alguns cliques !</p>
                     </div>
-                    <div class="h-7 px-1 flex justify-center items-center rounded cursor-pointer transition-all hover:bg-zinc-500 active:bg-zinc-400">
-                        <div class="w-8 h-full flex justify-center items-center">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="w-full h-4/6 flex justify-start items-start flex-col px-12 font-semibold drop-shadow-md">
+                        <p class="indent-10">Alicerçada na inovação, na busca constante por oferecer ao mercado a melhor relação custo-benefício, na flexibilidade e na agilidade. Nosso propósito de negócio é claro e sustentado pelas relações de confiança que construímos junto aos nossos clientes.</p>
+                        <div class="w-full h-24 flex justify-end items-start">
+                            <a href="about.html" class="w-36 h-10 flex justify-center items-center mt-5 font-bold border-b-2 hover:rounded-lg hover:shadow-md drop-shadow-md border-solid border-[#80A9D2] cursor-pointer transition-all hover:bg-[#5C7B98] hover:border-2 active:bg-[#82959E] active:border-4">
+                                Saiba Mais
+                            </a>
                         </div>
-                        <div class="px-1 h-full flex justify-center items-center">Nossos Produtos</div>
-                    </div>
-                    <div class="h-7 px-1 flex justify-center items-center rounded cursor-pointer transition-all hover:bg-zinc-500 active:bg-zinc-400">
-                        <div class="w-8 h-full flex justify-center items-center">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </div>
-                        <div class="px-1 h-full flex justify-center items-center">Sobre Nós</div>
                     </div>
                 </div>
-                <div class="w-3/12 h-full flex justify-end items-center">
-                    <div class="py-0.5 px-2 flex justify-center items-center rounded border border-solid border-white">
-                        PT-BR
+                <div class="w-1/2 h-full flex justify-center items-center pt-14">
+                    <div class="w-7/12 h-4/6 flex justify-center items-center flex-col bg-gray-100 border-2 border-solid border-gray-500 rounded-xl shadow-md drop-shadow-md">
+                        <div class="w-full h-10 flex justify-start items-center pl-10 font-bold text-xl">Converse conosco</div>
+                        <div class="w-full h-1/6 flex justify-end items-start pl-10 gap-y-1 flex-col">
+                            <label for="name" class="text-sm font-medium">Seu nome</label>
+                            <input type="text" name="name" id="name" class="w-10/12 h-3/6 px-3 text-xs font-semibold border-2 border-solid border-gray-300 rounded-md transition-all outline-none focus:border-gray-400" placeholder="">
+                        </div>
+                        <div class="w-full h-1/6 flex justify-end items-start pl-10 gap-y-1 flex-col">
+                            <label for="email" class="text-sm font-medium">Seu email</label>
+                            <input type="email" name="email" id="email" placeholder="" class="w-10/12 h-3/6 px-3 text-xs font-semibold border-2 border-solid border-gray-300 rounded-md transition-all outline-none focus:border-gray-400">
+                        </div>
+                        <div class="w-full h-2/6 flex justify-center items-start pl-10 gap-y-1 flex-col">
+                            <label for="message" class="text-sm font-medium">Sua mensagem</label>
+                            <textarea name="message" id="message" class="w-10/12 h-3/6 px-3 py-2 text-xs font-semibold border-2 border-solid border-gray-300 rounded-md transition-all outline-none focus:border-gray-400"></textarea>
+                        </div>
+                        <div class="w-full h-12 flex justify-center items-center px-9 gap-x-2">
+                            <input type="checkbox" name="about" id="about" class="cursor-pointer w-4 h-4">
+                            <label for="about" class="cursor-pointer text-sm font-medium">Deseja estar constantemente ciente das nossas novidades ?</label>
+                        </div>
+                        <div class="w-full grow flex justify-end items-center px-10">
+                            <div class="w-4/12 h-10 flex justify-center items-center font-bold drop-shadow-md cursor-pointer border-b-2 border-solid border-[#5C7B98] transition-all hover:bg-[#6E93B5] hover:text-white hover:border-2 hover:rounded-lg hover:shadow-md active:bg-[#80A9D2] active:border-4">Enviar</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="w-3/12 h-full flex justify-center items-center"></div>
-        </nav>
-        <main class="w-full h-full flex justify-center items-center bg-center bg-no-repeat bg-cover bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/home/image_text/it_home_government_20191106.jpg)]">
-            <div class="w-full h-full flex justify-center items-center bg-[rgba(4,47,46,0.75)]">
-                <div class="w-2/3 h-full flex justify-center items-center flex-col">
-                    <div class="w-full h-1/5 flex justify-center items-center flex-col border border-solid border-white"></div>
-                </div>
-                <div class="w-1/3 h-full flex justify-center items-center"></div>
             </div>
         </main>
-    </div>
+        <footer class="w-full h-64 flex justify-center items-center bg-[#2B323A] border-t-2 border-solid border-gray-500">
+            <div class="w-2/6 h-64 flex justify-center items-center flex-col">
+                <div class="w-full h-2/6 flex justify-start items-center pl-10 text-white font-bold">
+                    <a href="about.html" class="flex justify-center items-end">
+                        <div class="text-4xl text-[#2374CB]">Tail</div>
+                        <div class="text-4xl">loja</div>
+                        <div class="self-start text-xl">© 2024</div>
+                    </a>
+                </div>
+                <div class="w-full h-4/6 flex justify-evenly items-center flex-col text-white font-bold">
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-solid fa-phone text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-solid fa-phone text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-brands fa-whatsapp text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-brands fa-whatsapp text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full grow flex justify-evenly items-center text-2xl">
+                        <a href=""><i class="fa-brands fa-instagram transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i class="fa-brands fa-github transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/6 h-64 flex justify-start items-start flex-col gap-y-3 pt-9 text-white">
+                <p class="font-bold">Menu:</p>
+                <a href="index.html" class="mt-3 font-medium transition-all cursor-pointer hover:text-[#2374CB] hover:drop-shadow-md">Home</a>
+                <a href="about.html" class="font-medium transition-all cursor-pointer hover:text-[#2374CB] hover:drop-shadow-md">Sobre nós</a>
+                <a href="products.html" class="font-medium transition-all cursor-pointer hover:text-[#2374CB] hover:drop-shadow-md">Nossos Produtos</a>
+            </div>
+            <div class="w-2/6 h-64 flex justify-center items-center flex-col pt-7 pb-2 gap-y-7 text-white">
+                <div class="w-full flex justify-center items-center font-bold">
+                    <div class="w-2/12 h-full flex justify-end items-start text-lg text-[#2374CB]">
+                        <i class="fa-solid fa-location-dot mt-1 mr-4"></i>
+                    </div>
+                    <div class="w-10/12 h-full flex justify-start items-start flex-col gap-y-2 text-sm">
+                        <p>Avenida Osvaldo Aranha, 540 - Bairro Juventude da Enologia - CEP: 95700-206</p>
+                        <p>Bento Gonçalves/RS - Brasil</p>
+                        <p>Tail Loja Indústria de Móveis Ltda.</p>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center items-center">
+                    <div class="w-2/12 flex justify-end items-center text-2xl text-[#2374CB]">
+                        <i class="fa-regular fa-clock mr-4"></i>
+                    </div>
+                    <div class="w-10/12 flex justify-center items-start flex-col text-sm">
+                        <p class="font-bold">Horário de atendimento</p>
+                        <p class="font-semibold">Segunda a Sexta: 07:00h às 11:48h / 13:00h às 17:00h.</p>
+                    </div>
+                </div>
+                <div class="w-full h-3/6 flex justify-center items-end text-sm font-medium">
+                    <p>© 2024 Tail Loja Indústria de Móveis Ltda. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <section id="second_screen" class="z-0 absolute w-screen h-screen hidden justify-center items-center"></section>
 </body>
 </html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="p-0 m-0 font-sans">
+    <section id="first_screen"
+        class="z-0 absolute w-screen h-screen flex justify-start items-center flex-col overflow-auto bg-center bg-no-repeat bg-cover bg-[url(https://www.hermanmiller.com/content/dam/hmicom/page_assets/home/image_text/it_home_government_20191106.jpg)]">
+        <header
+            class="z-10 fixed w-full h-14 flex justify-evenly items-center text-white bg-[#394B5E] shadow-md drop-shadow-md">
+            <div class="w-3/12 h-full flex justify-center items-center">
+                <a href="index.html" class="flex justify-center items-center gap-x-3 cursor-pointer">
+                    <div class="text-3xl font-bold">TI</div>
+                    <div class="text-2xl">|</div>
+                    <div class="text-xl font-bold">Tailloja</div>
+                </a>
+            </div>
+            <div class="w-5/12 h-full flex justify-center items-center gap-x-3">
+                <a href="index.html"
+                    class="py-1 flex justify-center items-center transition-all opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer">
+                    <div class="px-2 h-full flex justify-center items-center font-bold">Home</div>
+                </a>
+                <a href="about.html"
+                    class="py-1 flex justify-center items-center transition-all opacity-100 hover:opacity-100 active:opacity-60 cursor-pointer">
+                    <div class="px-2 h-full flex justify-center items-center font-bold">Sobre nós</div>
+                </a>
+                <a href="products.html"
+                    class="py-1 flex justify-center items-center transition-all opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer">
+                    <div class="px-2 h-full flex justify-center items-center font-bold">Nosso Acervo</div>
+                </a>
+            </div>
+            <div class="w-3/12 h-full flex justify-center items-center gap-x-3">
+                <div
+                    class="w-10 h-10 flex justify-center items-center bg-white text-[#394B5E] text-xl rounded-3xl shadow-md drop-shadow-md border-2 border-solid border-gray-500 transition-all cursor-pointer active:bg-[#394B5E]">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div
+                    class="w-6/12 h-10 flex justify-center items-center bg-white rounded-3xl shadow-md drop-shadow-md border-2 border-solid border-gray-500 transition-all cursor-pointer active:bg-[#394B5E]">
+                    <div class="w-3/12 h-full flex justify-center items-center">
+                        <div
+                            class="w-8 h-8 rounded-full shadow-md drop-shadow-md bg-center bg-no-repeat bg-cover bg-[url(https://img.freepik.com/premium-photo/duck-is-standing-white-background-with-white-background_867452-8708.jpg)]">
+                        </div>
+                    </div>
+                    <div class="w-6/12 h-full flex justify-center items-center text-[#394B5E] drop-shadow-md font-bold">
+                        Seu Perfil
+                    </div>
+                    <div class="w-3/12 h-full flex justify-center items-center">
+                        <div class="w-6 h-6 flex justify-center items-center rounded-full bg-[#394B5E]">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main
+            class="w-full flex justify-center items-center">
+            <div class="w-full h-full flex justify-center items-center flex-col pt-14 bg-[rgba(57,75,94,0.75)]">
+                <div class="w-full h-24 flex justify-evenly items-center bg-white shadow-md drop-shadow-md border-b-2 border-solid border-gray-300">
+                    <div class="w-3/12 h-full flex justify-center items-center"></div>
+                    <div class="w-3/12 h-full flex justify-center items-center flex-col gap-y-2">
+                        <div class="flex justify-center items-center gap-x-2 font-semibold text-sm">
+                            <a href="index.html">Home</a>
+                            <div><i class="fa-solid fa-caret-right"></i></div>
+                            <div class="font-bold">Empresa</div>
+                        </div>
+                        <div class="text-3xl font-bold drop-shadow-md">Sobre nós</div>
+                    </div>
+                    <div class="w-3/12 h-full flex justify-center items-center"></div>
+                </div>
+                <div id="industry_carousel" class="w-full h-[500px] flex justify-center items-center overflow-hidden shadow-md drop-shadow-md border-b-2 border-solid border-gray-500 bg-center bg-cover bg-no-repeat bg-[url(https://upload.wikimedia.org/wikipedia/commons/4/47/Ashley_Furniture_9_pano_2.jpg)]">
+                    <img class="industry_images w-screen h-screen transition-all flex opacity-100" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Ashley_Furniture_9_pano_2.jpg" alt="">
+                    <img class="industry_images w-screen h-screen transition-all hidden opacity-0" src="https://enterprise.press/wp-content/uploads/2022/09/woodfactory1600px.jpg" alt="">
+                    <img class="industry_images w-screen h-screen transition-all hidden opacity-0" src="https://www.traqline.com/wp-content/uploads/2023/06/us-furniture-blog.png" alt="">
+                    <img class="industry_images w-screen h-screen transition-all hidden opacity-0" src="https://filesblog.bizvibe.com/wp-content/uploads/2020/03/Top-10-Office-Furniture-Manufacturers.jpg" alt="">
+                    <img class="industry_images w-screen h-screen transition-all hidden opacity-0" src="https://www.meetco-furniture.com/u_file/2402/photo/2a1bb170d8.jpg" alt="">
+                </div>
+                <div class="w-full h-10 flex justify-center items-center bg-gradient-to-l from-[#3B5D81] from-20% to-white to-50%">
+                    <div class="w-64 h-7 flex justify-center items-center rounded-lg bg-white border-2 border-solid border-gray-500">
+                        <div id="industry_carousel_setter" class="w-56 h-5 flex justify-evenly items-center">
+                            <div class="w-3/12 h-4/6 rounded-lg bg-[#5C7B98] transition-all"></div>
+                            <div class="w-2/12 h-4/6 rounded-lg bg-gray-400 transition-all"></div>
+                            <div class="w-2/12 h-4/6 rounded-lg bg-gray-400 transition-all"></div>
+                            <div class="w-2/12 h-4/6 rounded-lg bg-gray-400 transition-all"></div>
+                            <div class="w-2/12 h-4/6 rounded-lg bg-gray-400 transition-all"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-96 flex justify-center items-center bg-gradient-to-l from-[#3B5D81] from-20% to-white to-50% drop-shadow-md shadow-md border-b-2 border-solid border-gray-400">
+                    <div class="w-1/2 h-full flex justify-start items-start flex-col px-16 pt-9 gap-y-5">
+                        <p class="text-4xl font-bold drop-shadow-md">Nossa história</p>
+                        <p class="text-sm indent-10 font-semibold drop-shadow-md">Localizada em Bento Gonçalves, na Serra Gaúcha. Fundada em 2016, é uma empresa consolidada e reconhecida no mercado nacional como uma das principais fabricantes de móveis, sendo especialista no segmento. Conta com instalações modernas em um parque industrial com mais de 320 mil m² de área. Estando presente em mais de 1000 pontos de venda em todo o território nacional e com atuação internacional em 10 países.</p>
+                        <p class="text-sm indent-10 font-semibold drop-shadow-md">Nosso propósito de negócio é claro e sustentado pelas relações de confiança que construímos junto aos nossos parceiros comerciais.</p>
+                    </div>
+                    <div class="w-1/2 h-full flex justify-center items-center flex-col">
+                        <div class="w-10/12 h-5/6 rounded-xl border-2 border-solid border-gray-300 shadow-md drop-shadow-md bg-center bg-cover bg-no-repeat">
+                            <iframe class="w-full h-full rounded-xl shadow-md drop-shadow-md" src="https://www.youtube.com/embed/oiXbtsUmDFg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;" allowfullscreen> </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-96 flex justify-center items-center flex-col text-white">
+                    <div class="w-full grow flex justify-center items-center text-4xl font-bold drop-shadow-md">Nossos valores</div>
+                    <div class="w-full flex justify-evenly items-center">
+                        <div class="w-2/12 h-64 flex justify-center items-center flex-col gap-y-3 drop-shadow-md">
+                            <div class="w-10/12 h-2/5 flex justify-center items-center text-4xl">
+                                <div class="w-20 h-20 flex justify-center items-center rounded-full shadow-md drop-shadow-md border-[5px] border-dotted border-white"><i class="fa-solid fa-people-group"></i></div>
+                            </div>
+                            <div class="w-full grow font-bold break-normal"><p class="drop-shadow-md">Unidade, respeito e fraternidade entre os trabalhadores</p></div>
+                        </div>
+                        <div class="w-2/12 h-64 flex justify-center items-center flex-col gap-y-3 drop-shadow-md">
+                            <div class="w-10/12 h-2/5 flex justify-center items-center text-4xl">
+                                <div class="w-20 h-20 flex justify-center items-center rounded-full shadow-md drop-shadow-md border-[5px] border-dotted border-white"><i class="fa-regular fa-handshake"></i></div>
+                            </div>
+                            <div class="w-full grow font-bold break-normal"><p class="drop-shadow-md">Honestidade e confiabilidade entre o funcionário e a empresa</p></div>
+                        </div>
+                        <div class="w-2/12 h-64 flex justify-center items-center flex-col gap-y-3 drop-shadow-md">
+                            <div class="w-10/12 h-2/5 flex justify-center items-center text-4xl">
+                                <div class="w-20 h-20 flex justify-center items-center rounded-full shadow-md drop-shadow-md border-[5px] border-dotted border-white"><i class="fa-solid fa-mountain"></i></div>
+                            </div>
+                            <div class="w-full grow font-bold break-normal"><p class="drop-shadow-md">Esforço e excelência do trabalho</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[400px] flex justify-center items-center flex-col text-white bg-[#424D59] border-t-2 border-solid border-gray-300">
+                    <div class="w-full h-24 flex justify-start items-center drop-shadow-md text-4xl text-white font-bold pl-64">Conheça nossos produtos</div>
+                    <div class="w-full grow flex justify-start items-center">
+                        <div class="w-1/3 h-full flex justify-end items-center">
+                            <div class="w-2/5 h-4/6 flex justify-center items-start flex-col pl-5 text-lg text-white font-bold gap-y-2 drop-shadow-md shadow-md bg-[#2C343C] rounded-l-lg">
+                                <p onclick="theme_change(this)" data-theme_num="0" class="theme_changer cursor-pointer transition-all hover:opacity-100 opacity-100 translate-x-10">Cozinha</p>
+                                <p onclick="theme_change(this)" data-theme_num="1" class="theme_changer cursor-pointer transition-all hover:opacity-100 opacity-50 hover:translate-x-1">Quarto</p>
+                                <p onclick="theme_change(this)" data-theme_num="2" class="theme_changer cursor-pointer transition-all hover:opacity-100 opacity-50 hover:translate-x-1">Escritório</p>
+                                <p onclick="theme_change(this)" data-theme_num="3" class="theme_changer cursor-pointer transition-all hover:opacity-100 opacity-50 hover:translate-x-1">Banheiro</p>
+                            </div>
+                        </div>
+                        <div class="w-3/6 h-full flex justify-center items-center drop-shadow-md shadow-md bg-[#2C343C] rounded-xl">
+                            <div id="items_carousel" class="w-10/12 h-5/6 flex justify-center items-center flex-col rounded-lg">
+                                <div class="w-full h-5/6 flex justify-center items-center text-black">
+                                    <div onclick="item_change(this)" data-change_num="0" class="mx-5 w-7 h-7 flex justify-center items-center opacity-60 cursor-pointer text-base bg-white rounded-full transition-all hover:opacity-100"><i class="fa-solid fa-chevron-left"></i></div>
+                                    <div class="grow h-full max-h-[250px] flex justify-between items-center overflow-hidden drop-shadow-md shadow-md rounded-lg border-2 border-solid border-gray-300 bg-center bg-cover bg-no-repeat bg-[url(https://www.thecarpentryshopco.com/cdn/shop/files/raval-sofa-organic-bookshelf-slab-with-glass-shelves-40294298452194.jpg?v=1712782935&width=1946)]">
+                                        <img class="item_images transition-all flex opacity-100" src="" alt="">
+                                        <img class="item_images transition-all hidden opacity-0" src="" alt="">
+                                        <img class="item_images transition-all hidden opacity-0" src="" alt="">
+                                        <img class="item_images transition-all hidden opacity-0" src="" alt="">
+                                        <img class="item_images transition-all hidden opacity-0" src="" alt="">
+                                    </div>
+                                    <div onclick="item_change(this)" data-change_num="1" class="mx-5 w-7 h-7 flex justify-center items-center opacity-60 cursor-pointer text-base bg-white rounded-full transition-all hover:opacity-100"><i class="fa-solid fa-chevron-right"></i></div>
+                                </div>
+                                <div class="w-full h-1/6 flex justify-center items-center">
+                                    <div class="w-3/6 h-5 flex justify-evenly items-center">
+                                        <div class="h-4/6 rounded-lg transition-all drop-shadow-md shadow-md w-3/12 bg-[#5C7B98]"></div>
+                                        <div class="h-4/6 rounded-lg transition-all drop-shadow-md shadow-md w-2/12 bg-gray-400"></div>
+                                        <div class="h-4/6 rounded-lg transition-all drop-shadow-md shadow-md w-2/12 bg-gray-400"></div>
+                                        <div class="h-4/6 rounded-lg transition-all drop-shadow-md shadow-md w-2/12 bg-gray-400"></div>
+                                        <div class="h-4/6 rounded-lg transition-all drop-shadow-md shadow-md w-2/12 bg-gray-400"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-80 flex justify-evenly items-center bg-gradient-to-b from-[#424D59] from-50% to-white to-50%">
+                    <a href="products.html" class="w-4/12 h-2/3 flex justify-start items-center drop-shadow-md shadow-md rounded-md border-2 border-solid border-gray-300 cursor-pointer transition-all hover:translate-y-[-5px] bg-center bg-cover bg-no-repeat bg-[url(https://rockgalpin.co.uk/wp-content/uploads/2021/02/rapid-prototyping-how-to-use-it-in-furniture-production-View00-1.jpg)]">
+                        <div class="w-2/3 h-full flex justify-between items-start flex-col p-5 bg-[rgba(255,255,255,0.75)]">
+                            <p class="text-xl font-bold">Veja todo nosso acervo</p>
+                            <div class="self-end w-36 h-10 flex justify-center items-center mt-5 font-bold border-b-2 hover:shadow-md drop-shadow-md border-solid border-[#80A9D2] cursor-pointer transition-all hover:bg-[#6E93B5] hover:text-white hover:border-2 active:border-4">Saiba Mais</div>
+                        </div>
+                    </a>
+                    <div class="w-4/12 h-2/3 flex justify-start items-center drop-shadow-md shadow-md rounded-md border-2 border-solid border-gray-300 cursor-pointer transition-all hover:translate-y-[-5px] bg-center bg-cover bg-no-repeat bg-[url(https://static.vecteezy.com/system/resources/previews/007/359/638/large_2x/businessmen-shaking-hands-above-the-wooden-desk-in-a-modern-office-close-up-unknown-business-people-at-meeting-teamwork-partnership-and-handshake-concept-free-photo.JPG)]">
+                        <div class="w-2/3 h-full flex justify-between items-start flex-col p-5 bg-[rgba(255,255,255,0.75)]">
+                            <p class="text-xl font-bold">Deseja trabalhar conosco ?</p>
+                            <div class="self-end w-36 h-10 flex justify-center items-center mt-5 font-bold border-b-2 hover:shadow-md drop-shadow-md border-solid border-[#80A9D2] cursor-pointer transition-all hover:bg-[#6E93B5] hover:text-white hover:border-2 active:border-4">Saiba Mais</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer
+            class="w-full h-64 flex justify-center items-center bg-[#2B323A] border-t-2 border-solid border-gray-500">
+            <div class="w-2/6 h-64 flex justify-center items-center flex-col">
+                <div class="w-full h-2/6 flex justify-start items-center pl-10 text-white font-bold">
+                    <a href="about.html" class="flex justify-center items-end">
+                        <div class="text-4xl text-[#2374CB]">Tail</div>
+                        <div class="text-4xl">loja</div>
+                        <div class="self-start text-xl">© 2024</div>
+                    </a>
+                </div>
+                <div class="w-full h-4/6 flex justify-evenly items-center flex-col text-white font-bold">
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-solid fa-phone text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-solid fa-phone text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-brands fa-whatsapp text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full flex justify-start items-center pl-10 gap-x-3">
+                        <i class="fa-brands fa-whatsapp text-lg text-[#2374CB]"></i>
+                        <p class="transition-all cursor-pointer hover:text-[#2374CB]">+ 55 (54) 12345678</p>
+                    </div>
+                    <div class="w-full grow flex justify-evenly items-center text-2xl">
+                        <a href=""><i
+                                class="fa-brands fa-instagram transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i
+                                class="fa-brands fa-youtube transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i
+                                class="fa-brands fa-github transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i
+                                class="fa-brands fa-x-twitter transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                        <a href=""><i
+                                class="fa-brands fa-linkedin transition-all cursor-pointer hover:text-[#2374CB]"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/6 h-64 flex justify-start items-start flex-col gap-y-3 pt-9 text-white">
+                <p class="font-bold">Menu:</p>
+                <a href="index.html"
+                    class="mt-3 font-medium transition-all cursor-pointer hover:text-[#2374CB] hover:drop-shadow-md">Home</a>
+                <a href="about.html"
+                    class="font-medium transition-all cursor-pointer hover:text-[#2374CB] hover:drop-shadow-md">Sobre
+                    nós</a>
+                <a href="products.html"
+                    class="font-medium transition-all cursor-pointer hover:text-[#2374CB] hover:drop-shadow-md">Nossos
+                    Produtos</a>
+            </div>
+            <div class="w-2/6 h-64 flex justify-center items-center flex-col pt-7 pb-2 gap-y-7 text-white">
+                <div class="w-full flex justify-center items-center font-bold">
+                    <div class="w-2/12 h-full flex justify-end items-start text-lg text-[#2374CB]">
+                        <i class="fa-solid fa-location-dot mt-1 mr-4"></i>
+                    </div>
+                    <div class="w-10/12 h-full flex justify-start items-start flex-col gap-y-2 text-sm">
+                        <p>Avenida Osvaldo Aranha, 540 - Bairro Juventude da Enologia - CEP: 95700-206</p>
+                        <p>Bento Gonçalves/RS - Brasil</p>
+                        <p>Tail Loja Indústria de Móveis Ltda.</p>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center items-center">
+                    <div class="w-2/12 flex justify-end items-center text-2xl text-[#2374CB]">
+                        <i class="fa-regular fa-clock mr-4"></i>
+                    </div>
+                    <div class="w-10/12 flex justify-center items-start flex-col text-sm">
+                        <p class="font-bold">Horário de atendimento</p>
+                        <p class="font-semibold">Segunda a Sexta: 07:00h às 11:48h / 13:00h às 17:00h.</p>
+                    </div>
+                </div>
+                <div class="w-full h-3/6 flex justify-center items-end text-sm font-medium">
+                    <p>© 2024 Tail Loja Indústria de Móveis Ltda. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <section id="second_screen" class="z-0 absolute w-screen h-screen hidden justify-center items-center"></section>
+    <script src="about.js"></script>
+</body>
+
+</html>
