@@ -1,5 +1,7 @@
 <?php
-require_once("./Connection.php");
+namespace Model;
+use \PDO;
+
 final class Connection {
     private $connection;
     public function __construct() {

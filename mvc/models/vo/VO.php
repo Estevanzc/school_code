@@ -1,4 +1,6 @@
 <?php
+namespace Model\VO;
+
 abstract class VO {
     protected $id;
     public function __construct($id) {

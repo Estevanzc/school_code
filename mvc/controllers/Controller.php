@@ -1,4 +1,6 @@
 <?php
+namespace Controller;
+
 abstract class Controller {
     public function redirect($url) {
         header("Location: $url");

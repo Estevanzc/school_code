@@ -22,7 +22,7 @@
                 <td><?php echo ($disciplina->getId())?></td>
                 <td><?php echo ($disciplina->getNome())?></td>
                 <td>
-                    <a href="*">Editar</a>
+                    <a href="disciplina.php?id=<?php echo $disciplina->getId();?>">Editar</a>
                     <br>
                     <a href="*">Excluir</a>
                 </td>

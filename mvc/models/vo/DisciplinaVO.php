@@ -1,5 +1,7 @@
 <?php
-final class DiscplinaVO extends VO {
+namespace Model\VO;
+
+final class DisciplinaVO extends VO {
     private $nome;
     public function __construct($id = 0, $nome = "") {
         parent::__construct($id);
