@@ -8,7 +8,7 @@
 <body>
     <h1>Sistema Academico - Cadastro de Disciplina</h1>
     <a href="index.php">Voltar à listagem</a>
-    <form action="" method="POST">
+    <form action="salvarDisciplina.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $disciplina->getId();?>">
         <input type="text" name="nome" value="<?php echo $disciplina->getNome();?>" placeholder="Nome:">
         <br>
