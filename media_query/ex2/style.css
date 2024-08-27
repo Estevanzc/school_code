@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    background-color: paleturquoise;
+}
+.item {
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.container .item:hover {
+    background-color: rgb(144, 206, 206);
+}
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+    }
+}
+@media (max-width: 320px) {
+    .container {;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 100px);
+    }
+}
