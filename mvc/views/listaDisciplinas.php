@@ -6,7 +6,8 @@
     <title>Sistema Acadêmico</title>
 </head>
 <body>
-    <h1>Sistema Acadêmico - Disciplinas</h1>
+    <h1>Sistema Acadêmico</h1>
+    <h2>Disciplinas</h2>
     <a href="disciplina.php">Incluir nova</a>
     <table border="2">
         <tr>
