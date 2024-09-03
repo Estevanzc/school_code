@@ -1,0 +1,68 @@
+requisito não funcional:
+
+notação:
+    "O sistema deve"
+
+produto:
+    facilidade de uso:
+        Abrange conceitos das teorias de nielsen usuabilidade e acessibilidade do site
+        
+        Example:
+            - "O sistema deve disponilbilizar frames de ajuda em cada página"
+            - "O sistema deve possuir máscaras de preenchimento nos campos dos formulários"
+            - "O sistema deve sinalizar presença de campos obrigatórios"
+
+    eficiência:
+        desempenho:
+            - "O sistema deve retornar uma resposta em 5 segundos"
+            - "O sistema deve utilizar no máximo 60% da capacidade de processamento"
+
+    confiabilidade:
+        Diz respeito à prevenção de bugs
+
+        Example:
+            - "O sistema deve falhar no máximo 2 vezes por mês"
+            - "O sistema deve estar disponível em 95% do ano"
+
+    portabilidade:
+        Usuabilidade em diferentes plataformas e/ou capacidade de transporte local ou remoto do sistema
+
+        Example:
+            - "O sistema deve ser responsivo e adaptar-se a notebooks, celulares e tablets"
+            - "O sistema deve funcionar nos navegadores Google, Opera, Edge e Internet Explorer"
+
+organisacionais:
+    entrega:
+        - "O sistema deve ser entregue em até 80 dias"
+
+    implementação:
+        - "O sistema deve ser desenvolvido em Javascript, PHP e MySQL"
+        - "O sistema deve ser desenvolvido para Internet"
+
+    padrão:
+        refere-se a padronização de notação de diagramas, modelo, implementação, etc
+
+        Example:
+            - "O sitema deve ser desenvolvido em MVC"
+            - "O sitema deve ser desenvolvido utilizando o padrão Emag"
+
+externos:
+    interoperabilidade:
+        capacidade de interação com outros sistemas
+        
+        Example:
+            - "O sistema deve comunicar-se com o sistema SEFAZ"
+    
+    éticos:
+        legislação de proteção de dados
+
+        Example:
+            - "O sistema deve atender aos requisitos legais para utilização de códigos de terceiros"
+    
+    legais:
+        segurança:
+            - "O sitema deve permitir acesso apenas a usuários autenticados" //relacionado com um requisito fucional (O sistema deve permitir login e logout)
+
+        privacidade:
+            - "O sitema deve armazenar dados de maneira criptografado"
+            - "O sitema deve permitir diferentes níveis de acesso" //relacionado com um requisito fucional (O sistema deve gerenciar diferentes níveis de acessocom os seguintes dados: identificação do nível, nível, funcionalidades de acesso)
