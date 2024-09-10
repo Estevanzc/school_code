@@ -8,6 +8,7 @@
 <body>
     <h1>Sistema Acadêmico</h1>
     <h2>Disciplinas</h2>
+    <a href="matriculas.php">Matriculas</a><br>
     <a href="disciplina.php">Incluir nova</a>
     <table border="2">
         <tr>
