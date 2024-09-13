@@ -27,6 +27,10 @@ final class MatriculaController extends Controller {
     public function save() {
     }
     public function remove() {
+        $vo = new MatriculaVO($_GET["id"]);
+        $model = new MatriculaModel();
+        $result = $model->delete($vo);
+        $this->redirect("matriculas.php");
     }
 }
 ?>

@@ -30,6 +30,8 @@ final class MatriculaModel extends Model {
     }
     public function delete($vo) {
         $db = new Connection();
-        $query = "";
+        $query = "DELETE FROM matriculas WHERE id = :id";
+        $binds = ["id" => $vo->getId()];
+        return $db->execute($query, $binds);
     }
 }
