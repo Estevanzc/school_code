@@ -11,11 +11,15 @@ produto:
             - "O sistema deve disponilbilizar frames de ajuda em cada página"
             - "O sistema deve possuir máscaras de preenchimento nos campos dos formulários"
             - "O sistema deve sinalizar presença de campos obrigatórios"
+            - "O sistema deve treinar os usuários durante uma semana"
+            - "O sistema deve conter frames de ajuda em cada campo de preenchimento"
+            - "O sistema deve conter um assistente de libras"
 
     eficiência:
         desempenho:
             - "O sistema deve retornar uma resposta em 5 segundos"
             - "O sistema deve utilizar no máximo 60% da capacidade de processamento"
+            - "O sistema deve fazer os refresh a cada 30 minutos"
 
     confiabilidade:
         Diz respeito à prevenção de bugs
@@ -23,6 +27,8 @@ produto:
         Example:
             - "O sistema deve falhar no máximo 2 vezes por mês"
             - "O sistema deve estar disponível em 95% do ano"
+            - "O sistema deve estar disponível 24 horas durante 360 dias"
+            - "O sistema deve reiniciar em no máximo 2 segundos após ocorrência de falha"
 
     portabilidade:
         Usuabilidade em diferentes plataformas e/ou capacidade de transporte local ou remoto do sistema
@@ -30,6 +36,8 @@ produto:
         Example:
             - "O sistema deve ser responsivo e adaptar-se a notebooks, celulares e tablets"
             - "O sistema deve funcionar nos navegadores Google, Opera, Edge e Internet Explorer"
+            - "O sistema deve funcionar no sistema operacional Windows 10"
+            - "O sistema deve funcionar com base em um banco de dados"
 
 organisacionais:
     entrega:
@@ -62,7 +70,6 @@ externos:
     legais:
         segurança:
             - "O sitema deve permitir acesso apenas a usuários autenticados" //relacionado com um requisito fucional (O sistema deve permitir login e logout)
-
-        privacidade:
             - "O sitema deve armazenar dados de maneira criptografado"
             - "O sitema deve permitir diferentes níveis de acesso" //relacionado com um requisito fucional (O sistema deve gerenciar diferentes níveis de acessocom os seguintes dados: identificação do nível, nível, funcionalidades de acesso)
+            - "O sistema deve restrigir acesso a dados privativos de pessoas não autorizadas"
