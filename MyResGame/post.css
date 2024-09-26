@@ -1,0 +1,54 @@
+:root {
+    --main-color: #0449C8;
+    --main-menu-color: #364d78;
+    --menu-button-hover-color: #436095;
+    --menu-button-active-color: #5072B1;
+    --secondary-menu-color: #30569D;
+    --button-color: #1F58C1;
+    --button-hover-color: #1a4ba5;
+    --button-active-color: #2466E0;
+    --secondary1-color: #2d3175;
+    --title-color: #323e54;
+    --shadow-color: #252a33;
+    --shadow1-color: #2d2f33;
+    --background-color: rgb(220,220,220);
+}
+#post_title {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    color: var(--title-color);
+    font-weight: bold;
+}
+#post_desc {
+    display: flex;
+    gap: 0px 5px;
+}
+#post_desc>p:nth-child(1) {
+    opacity: 0.5;
+}
+#post_desc>p:nth-child(3) {
+    color: var(--button-hover-color);
+    font-weight: bold;
+}
+.post_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post_img>img {
+    max-width: 60%;
+    border: 2px solid var(--background-color);
+    border-radius: 10px;
+    filter: drop-shadow(1px 1px 5px #252a33);
+}
+.post_text {
+    width: 50%;
+    font-size: 1.2em;
+    font-weight: 450;
+    text-indent: 40px;
+}
