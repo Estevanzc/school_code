@@ -14,14 +14,14 @@
         rel="stylesheet">
     <link rel="icon" href="imgs/icon.png">
     <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="post.css">
 </head>
 
-<body data-page_type="0">
+<body data-page_type="1" data-post_num="<?php echo ($_GET["post_num"] ?? 0)?>">
     <header>
         <menu>
             <div id="logo">
-                <a href=""></a>
+                <a href="index.html"></a>
             </div>
             <div id="main_nav">
                 <div id="search_element">
@@ -57,86 +57,27 @@
     </header>
     <div id="back_ground">
         <main>
-            <a id="first_new" href="">
-                <div id="fn_img">
-                    <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
-                </div>
-                <div id="fn_desc">
-                    <summary>Infográfico detalha linha do tempo de desenvolvimento do PS5 Pro</summary>
-                    <div id="fn_text">
-                        <p>Com o PS5 Pro já revelado pela Sony, um longo ciclo de desenvolvimento está cada vez mais perto de se encerrar. E para apresentar como esse tempo evoluiu, um infográfico traça os detalhes completos de todo o período produtivo. As informações foram reunidas pelo Insider Gaming, que obteve autorização de suas fontes para resumir o que ocorreu nos últimos anos. Segundo o site, o console esteve em desenvolvimento por cerca de 31 meses.</p>
-                    </div>
-                    <div id="fn_footer">
-                        <div>
-                        </div>
-                        <div>
-                            <p class="new_date">00/00/00</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <section id="main_news">
-                <summary>Principais Notícias</summary>
-                <div>
-                    <div id="mn_links">
-                        <a class="mn_link" href="">
-                            <div class="mn_link_img">
-                                <img src="https://meups.com.br/wp-content/uploads/2024/07/tela-de-aviso-de-download-perigodo-do-google-chrome-900x503.jpg.webp" alt="">
-                            </div>
-                            <div class="mn_link_title">
-                                <p>Google Chrome exibirá página com aviso de downloads potencialmente perigosos</p>
-                            </div>
-                        </a>
-                        <a class="mn_link" href="">
-                            <div class="mn_link_img">
-                                <img src="https://meups.com.br/wp-content/uploads/2024/09/PS5-e-DualSense-especiais-de-30-anos-500x280.jpg.webp" alt="">
-                            </div>
-                            <div class="mn_link_title">
-                                <p>PS5 e DualSense especiais de 30 anos têm preços vazados</p>
-                            </div>
-                        </a>
-                        <a class="mn_link" href="">
-                            <div class="mn_link_img">
-                                <img src="https://meups.com.br/wp-content/uploads/2024/09/Everspace-2-500x280.jpg.webp" alt="">
-                            </div>
-                            <div class="mn_link_title">
-                                <p>DLC de Everspace 2 adiciona duas novas histórias e exploração em Leviatãs vivos</p>
-                            </div>
-                        </a>
-                        <a class="mn_link" href="">
-                            <div class="mn_link_img">
-                                <img src="https://meups.com.br/wp-content/uploads/2024/09/rayman-500x280.jpg.webp" alt="">
-                            </div>
-                            <div class="mn_link_title">
-                                <p>Rayman terá jogo de tabuleiro inspirado nos games mais recentes da franquia</p>
-                            </div>
-                        </a>
-                        <a class="mn_link" href="">
-                            <div class="mn_link_img">
-                                <img src="https://meups.com.br/wp-content/uploads/2024/09/tekken-8-500x280.jpg.webp" alt="">
-                            </div>
-                            <div class="mn_link_title">
-                                <p>Prepare-se para conhecer o gameplay completo de Heihachi em Tekken 8 nesta semana Prepare-se para conhecer o gameplay completo de Heihachi em Tekken 8 nesta semana</p>
-                            </div>
-                        </a>
-                        <a class="mn_link" href="">
-                            <div class="mn_link_img">
-                                <img src="https://meups.com.br/wp-content/uploads/2024/09/Blade-Runner-2033-Labriynth-2-500x280.jpg.webp" alt="">
-                            </div>
-                            <div class="mn_link_title">
-                                <p>Demissão coletiva na Annapurna não compromete Blade Runner 2033: Labriynth, mas deve trazer problemas</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div id="mn_main_img">
-                        <img src="https://meups.com.br/wp-content/uploads/2024/07/tela-de-aviso-de-download-perigodo-do-google-chrome-500x280.jpg" alt="">
-                        <img src="https://meups.com.br/wp-content/uploads/2024/07/tela-de-aviso-de-download-perigodo-do-google-chrome-500x280.jpg" alt="">
-                    </div>
-                </div>
+            <summary id="post_title">Infográfico detalha linha do tempo de desenvolvimento do PS5 Pro</summary>
+            <section id="post_desc">
+                <p>20 de setembro de 2024</p>
+                <p>por</p>
+                <p>Estevan Zimermann</p>
+            </section>
+            <section class="post_img">
+                <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg" alt="">
+            </section>
+            <section class="post_text">
+                <p>Com o PS5 Pro já revelado pela Sony, um longo ciclo de desenvolvimento está cada vez mais perto de se encerrar. E para apresentar como esse tempo evoluiu, um infográfico traça os detalhes completos de todo o período produtivo. As informações foram reunidas pelo Insider Gaming, que obteve autorização de suas fontes para resumir o que ocorreu nos últimos anos. Segundo o site, o console esteve em desenvolvimento por cerca de 31 meses. Neste período, ele saltou do codinome Trinity para PS5 Pro, tendo apenas um único Stock Keeping Unit (SKU) e projetado para apenas um modelo. Estima-se que as primeiras discussões sobre o videogame começaram em meados do primeiro trimestre de 2022. Confira abaixo o infográfico com os detalhes da linha do tempo e legendas para compreender os termos técnicos citados:</p>
+            </section>
+            <section class="post_img">
+                <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg" alt="">
+            </section>
+            <section class="post_text">
+                <p>Com o PS5 Pro já revelado pela Sony, um longo ciclo de desenvolvimento está cada vez mais perto de se encerrar. E para apresentar como esse tempo evoluiu, um infográfico traça os detalhes completos de todo o período produtivo. As informações foram reunidas pelo Insider Gaming, que obteve autorização de suas fontes para resumir o que ocorreu nos últimos anos. Segundo o site, o console esteve em desenvolvimento por cerca de 31 meses. Neste período, ele saltou do codinome Trinity para PS5 Pro, tendo apenas um único Stock Keeping Unit (SKU) e projetado para apenas um modelo. Estima-se que as primeiras discussões sobre o videogame começaram em meados do primeiro trimestre de 2022. Confira abaixo o infográfico com os detalhes da linha do tempo e legendas para compreender os termos técnicos citados:</p>
             </section>
             <section id="news_list">
                 <summary>Leia mais</summary>
-                <a class="nl_link" href="">
+                <a class="nl_link" href="post.html">
                     <div class="nl_img">
                         <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
                     </div>
@@ -154,7 +95,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="nl_link" href="">
+                <a class="nl_link" href="post.html">
                     <div class="nl_img">
                         <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
                     </div>
@@ -172,7 +113,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="nl_link" href="">
+                <a class="nl_link" href="post.html">
                     <div class="nl_img">
                         <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
                     </div>
@@ -190,7 +131,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="nl_link" href="">
+                <a class="nl_link" href="post.html">
                     <div class="nl_img">
                         <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
                     </div>
@@ -208,7 +149,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="nl_link" href="">
+                <a class="nl_link" href="post.html">
                     <div class="nl_img">
                         <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
                     </div>
@@ -226,7 +167,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="nl_link" href="">
+                <a class="nl_link" href="post.html">
                     <div class="nl_img">
                         <img src="https://meups.com.br/wp-content/uploads/2024/09/ps5-pro-5-1-900x503.jpg.webp" alt="">
                     </div>

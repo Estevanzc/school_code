@@ -1,4 +1,5 @@
-var dark_mode_icons = ["fa-solid fa-moon","fa-solid fa-sun"]
+var dark_mode_icons = ["fa-solid fa-moon", "fa-solid fa-sun"]
+var body = document.getElementsByTagName("body")[0]
 /*
 --main-color
 --main-menu-color
@@ -30,3 +31,81 @@ function dark_mode(element) {
         element.children[0].className = "fa-solid fa-moon"
     }
 }
+//new_tag
+function news_creater() {
+    if (body.dataset.page_type == 0) {
+        var first_new = document.getElementById("first_new")
+        var nl_link = document.getElementsByClassName("nl_link")
+        var main_news = document.getElementById("main_news").children[1]
+        /* first_new */
+        first_new.setAttribute("href", `post.php?post_num=0`)
+        first_new.children[0].children[0].setAttribute("src", posts[0].imgs[0])
+        first_new.children[1].children[0].innerHTML = posts[0].title
+        first_new.children[1].children[1].children[0].innerHTML = posts[0].texts[0]
+        var p0 = document.createElement("p")
+        var p1 = document.createElement("p")
+        p0.innerHTML = `#${posts[0].tags[0]}`
+        p1.innerHTML = `#${posts[0].tags[1]}`
+        first_new.children[1].children[2].children[0].appendChild(p0)
+        first_new.children[1].children[2].children[0].appendChild(p1)
+        first_new.children[1].children[2].children[1].children[0].innerHTML = `${posts[0].date.substring(8, 10)}/${posts[0].date.substring(5, 7)}/${posts[0].date.substring(0, 4)}`
+
+        /* main_news */
+        main_news.children[1].children[0].setAttribute("src", posts[1].imgs[0])
+        main_news.children[1].children[1].setAttribute("src", posts[1].imgs[1])
+        for (var i = 0; i <= Number(main_news.children[0].children.length - 1); i++) {
+            main_new = main_news.children[0].children[i]
+            main_new.setAttribute("href", `post.php?post_num=${i + 1}`)
+            main_new.children[0].children[0].setAttribute("src", posts[i + 1].imgs[0])
+            main_new.children[1].children[0].innerHTML = posts[i + 1].title
+        }
+
+        /* news_list */
+        for (var i = 0; i <= Number(nl_link.length - 1); i++) {
+            var post_num = i + 1 + Number(main_news.children[0].children.length - 1)
+            nl_link[i].setAttribute("href", `post.php?post_num=${post_num}`)
+            nl_link[i].children[0].children[0].setAttribute("src", posts[post_num].imgs[0])
+            nl_link[0].children[1].children[0].innerHTML = posts[post_num].title
+            nl_link[0].children[1].children[1].children[0].innerHTML = posts[post_num].texts[0]
+            var p0 = document.createElement("p")
+            var p1 = document.createElement("p")
+            p0.innerHTML = `#${posts[post_num].tags[0]}`
+            p1.innerHTML = `#${posts[post_num].tags[1]}`
+            nl_link[i].children[1].children[2].children[0].appendChild(p0)
+            nl_link[i].children[1].children[2].children[0].appendChild(p1)
+            nl_link[i].children[1].children[2].children[1].children[0].innerHTML = `${posts[i].date.substring(8, 10)}/${posts[i].date.substring(5, 7)}/${posts[i].date.substring(0, 4)}`
+        }
+    } else {
+        var nl_link = document.getElementsByClassName("nl_link")
+        var month_name = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+        var post_num = Number(body.dataset.post_num)
+        var post = posts[post_num]
+        var main = document.getElementsByTagName("main")[0]
+        main.children[0].innerHTML = post.title
+        main.children[1].children[0].innerHTML = `${Number(post.date.substring(8, 10))} de ${month_name[Number(post.date.substring(5, 7))]} de ${post.date.substring(0, 4)}`
+        main.children[1].children[2].innerHTML = post.author
+        main.children[2].children[0].setAttribute("src", post.imgs[0])
+        main.children[3].children[0].innerHTML = post.texts[0]
+        main.children[4].children[0].setAttribute("src", post.imgs[1])
+        main.children[5].children[0].innerHTML = post.texts[1]
+        
+        /* news_list */
+        for (var i = 0; i <= Number(nl_link.length - 1); i++) {
+            if (i != post_num) {
+                var post_num = i
+                nl_link[i].setAttribute("href", `post.php?post_num=${post_num}`)
+                nl_link[i].children[0].children[0].setAttribute("src", posts[post_num].imgs[0])
+                nl_link[0].children[1].children[0].innerHTML = posts[post_num].title
+                nl_link[0].children[1].children[1].children[0].innerHTML = posts[post_num].texts[0]
+                var p0 = document.createElement("p")
+                var p1 = document.createElement("p")
+                p0.innerHTML = `#${posts[post_num].tags[0]}`
+                p1.innerHTML = `#${posts[post_num].tags[1]}`
+                nl_link[i].children[1].children[2].children[0].appendChild(p0)
+                nl_link[i].children[1].children[2].children[0].appendChild(p1)
+                nl_link[i].children[1].children[2].children[1].children[0].innerHTML = `${posts[i].date.substring(8, 10)}/${posts[i].date.substring(5, 7)}/${posts[i].date.substring(0, 4)}`
+            }
+        }
+    }
+}
+news_creater()
