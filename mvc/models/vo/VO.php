@@ -17,4 +17,5 @@ abstract class VO {
     public function setId($id) {
         $this->id = $id;
     }
+
 }

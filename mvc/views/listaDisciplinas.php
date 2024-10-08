@@ -14,16 +14,17 @@
             <th>Nome</th>
             <th>Ações</th>
         </tr>
-        <?php foreach($disciplinas as $disciplina) {?>
-        <tr>
-            <td><?php echo $disciplina->getId(); ?></td>
-            <td><?php echo $disciplina->getNome();?></td></td>
-            <td>
-                <a href='disciplina.php?id=<?php echo $disciplina->getId(); };?>'>Editar</a>
-                <br>
-                <a href="#">Excluir</a>
-            </td>
-        </tr>
+        <?php foreach($disciplinas as $disciplina) { ?>
+            <tr>
+                <td><?php echo $disciplina->getId(); ?></td>
+                <td><?php echo $disciplina->getNome(); ?></td>
+                <td>
+                    <a href="disciplina.php?id=<?php echo $disciplina->getId(); ?>">Editar</a>
+                    <br>
+                    <a href="excluirDisciplina.php?id=<?php echo $disciplina->getId(); ?>">Excluir</a>
+                </td>
+            </tr>
+        <?php } ?>
     </table>
 </body>
 </html>

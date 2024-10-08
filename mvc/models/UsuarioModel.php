@@ -2,19 +2,19 @@
 
 namespace Model;
 
-use Model\VO\AlunoVO;
+use Model\VO\UsuarioVO;
 
-final class AlunoModel extends Model {
+final class UsuarioModel extends Model {
 
     public function selectAll($vo) {
         $db = new Database();
-        $query = "SELECT * FROM alunos";
+        $query = "SELECT * FROM usuarios";
         $data = $db->select($query);
 
         $arrayDados = [];
 
         foreach($data as $row) {
-            $vo = new AlunoVO($row["id"], $row["nome"], $row["matricula"]);
+            $vo = new UsuarioVO($row["id"], $row["login"], $row["senha"]);
             array_push($arrayDados, $vo);
         }
 
@@ -23,30 +23,27 @@ final class AlunoModel extends Model {
 
     public function selectOne($vo) {
         $db = new Database();
-        $query = "SELECT * FROM alunos WHERE id = :id";
+        $query = "SELECT * FROM usuarios WHERE id = :id";
         $binds = [":id" => $vo->getId()];
         $data = $db->select($query, $binds);
 
-        return new AlunoVO($data[0]["id"], $data[0]["nome"], $data[0]["matricula"]);
+        return new UsuarioVO($data[0]["id"], $data[0]["login"], $data[0]["senha"]);
     }
 
     public function insert($vo) {
         $db = new Database();
-        $query = "INSERT INTO alunos (nome, matricula) VALUES (:nome, :matricula)";
-        $binds = [
-            ":nome" => $vo->getNome(),
-            ":matricula" => $vo->getMatricula()
-        ];
+        $query = "INSERT INTO usuarios VALUES (default, :login, :senha)";
+        $binds = [":login" => $vo->getLogin(), ":senha" => $vo->getSenha()];
 
         return $db->execute($query, $binds);
     }
 
     public function update($vo) {
         $db = new Database();
-        $query = "UPDATE alunos SET nome = :nome, matricula = :matricula WHERE id = :id";
+        $query = "UPDATE usuarios SET login=:login, senha=:senha WHERE id = :id";
         $binds = [
-            ":nome" => $vo->getNome(),
-            ":matricula" => $vo->getMatricula(),
+            ":login" => $vo->getLogin(),
+            ":senha" => $vo->getSenha(),
             ":id" => $vo->getId()
         ];
 
@@ -55,7 +52,7 @@ final class AlunoModel extends Model {
 
     public function delete($vo) {
         $db = new Database();
-        $query = "DELETE FROM alunos WHERE id = :id";
+        $query = "DELETE FROM usuarios WHERE id = :id";
         $binds = [":id" => $vo->getId()];
 
         return $db->execute($query, $binds);

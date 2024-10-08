@@ -2,7 +2,7 @@
 
 namespace Model\VO;
 
-final class DisciplinaVO extends VO{
+final class DisciplinaVO extends VO {
 
     private $nome;
 
@@ -14,8 +14,9 @@ final class DisciplinaVO extends VO{
     public function getNome() {
         return $this->nome;
     }
-    
+
     public function setNome($nome) {
         $this->nome = $nome;
     }
+
 }
