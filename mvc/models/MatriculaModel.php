@@ -7,12 +7,9 @@ use Model\VO\MatriculaVO;
 final class MatriculaModel extends Model {
 
     public function selectAll($vo) {
-        $db = new Database();
+        $db = new Connection();
 
-        $query = "SELECT m.*, d.nome AS disciplina, a.nome AS aluno 
-                    FROM matriculas m 
-                    JOIN disciplinas d ON d.id = m.idDisciplina 
-                    JOIN alunos a ON a.id = m.idAluno ";
+        $query = "SELECT m.*, d.nome AS disciplina, a.nome AS aluno  FROM matriculas m JOIN disciplinas d ON d.id = m.idDisciplina JOIN alunos a ON a.id = m.idAluno ";
 
         $data = $db->select($query);
 
@@ -27,9 +24,9 @@ final class MatriculaModel extends Model {
     }    
 
     public function selectOne($vo) {
-        $db = new Database();
+        $db = new Connection();
         $query = "SELECT * FROM matriculas WHERE id = :id";
-        $binds = [":id" => $vo->getId()];
+        $binds = ["id" => $vo->getId()];
 
         $data = $db->select($query, $binds);
 
@@ -37,36 +34,36 @@ final class MatriculaModel extends Model {
     } 
 
     public function insert($vo) {
-        $db = new Database();
+        $db = new Connection();
         $query = "INSERT INTO matriculas (idDisciplina, idAluno, ano) VALUES (:idDisciplina, :idAluno, :ano)";
         
         $binds = [
-            ":idDisciplina" => $vo->getIdDisciplina(),
-            ":idAluno" => $vo->getIdAluno(),
-            ":ano" => $vo->getAno()
+            "idDisciplina" => $vo->getIdDisciplina(),
+            "idAluno" => $vo->getIdAluno(),
+            "ano" => $vo->getAno()
         ];
 
         return $db->execute($query, $binds);
     }   
 
     public function update($vo) {
-        $db = new Database();
+        $db = new Connection();
         $query = "UPDATE matriculas SET idDisciplina = :idDisciplina, idAluno = :idAluno, ano = :ano WHERE id = :id";
 
         $binds = [
-            ":idDisciplina" => $vo->getIdDisciplina(),
-            ":idAluno" => $vo->getIdAluno(),
-            ":ano" => $vo->getAno(),
-            ":id" => $vo->getId()
+            "idDisciplina" => $vo->getIdDisciplina(),
+            "idAluno" => $vo->getIdAluno(),
+            "ano" => $vo->getAno(),
+            "id" => $vo->getId()
         ];
 
         return $db->execute($query, $binds);
     }    
 
     public function delete($vo) {
-        $db = new Database();
+        $db = new Connection();
         $query = "DELETE FROM matriculas WHERE id = :id";
-        $binds = [":id" => $vo->getId()];
+        $binds = ["id" => $vo->getId()];
 
         return $db->execute($query, $binds);
     }        

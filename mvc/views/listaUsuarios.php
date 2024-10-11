@@ -22,7 +22,7 @@
                     <a href="usuario.php?id=<?php echo $usuario->getId(); ?>">Editar</a>
                     <br>
                     <a href="excluirUsuario.php?id=<?php echo $usuario->getId(); ?>">Excluir</a>
-                </td>       
+                </td>
             </tr>
         <?php } ?>
     </table>
