@@ -13,6 +13,14 @@
         <input type="text" name="login" value="<?php echo $usuario->getLogin(); ?>" placeholder="Login:">
         <br>
         <input type="text" name="senha" placeholder="Senha:">
+        <?php
+        if (!empty($usuario->getId())) {
+            ?>
+            <br>
+            <span>Para deixar a senha atual, basta deixar o o campo em branco</span>
+            <?php
+        }
+        ?>
         <br>
         <button type="submit">Salvar</button>
     </form>
