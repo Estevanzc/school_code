@@ -6,6 +6,7 @@
     <title>Sistema Acadêmico</title>
 </head>
 <body>
+    <?php require_once("views/includes/menu.php");?>
     <h1>Sistema Acadêmico - Alunos</h1>
     <a href="aluno.php">Incluir novo</a>
     <table>

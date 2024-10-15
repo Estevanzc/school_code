@@ -6,6 +6,7 @@
     <title>Sistema Acadêmico</title>
 </head>
 <body>
+    <?php require_once("views/includes/menu.php");?>
     <h1>Sistema Acadêmico - Cadastro de Aluno</h1>
     <a href="alunos.php">Voltar para a listagem</a>
     <form action="salvarAluno.php" method="POST">

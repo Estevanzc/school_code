@@ -6,6 +6,7 @@
     <title>Sistema Acadêmico - Matrículas</title>
 </head>
 <body>
+    <?php require_once("views/includes/menu.php");?>
     <h1>Sistema Acadêmico - Matrículas</h1>
     <a href="matricula.php">Inserir nova</a>
     <table>

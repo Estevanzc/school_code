@@ -6,11 +6,13 @@ final class UsuarioVO extends VO {
 
     private $login;
     private $senha;
+    private $nivel;
 
-    public function __construct($id = 0, $login = "", $senha = "") {
+    public function __construct($id = 0, $login = "", $senha = "", $nivel = 1) {
         parent::__construct($id);
         $this->login = $login;
         $this->senha = $senha;
+        $this->nivel = $nivel;
     }
 
     public function getLogin() {
@@ -27,6 +29,12 @@ final class UsuarioVO extends VO {
 
     public function setSenha($senha) {
         $this->senha = $senha;
+    }
+    public function getNivel() {
+        return $this->nivel;
+    }
+    public function setNivel($nivel) {
+        $this->nivel = $nivel;
     }
 
 }

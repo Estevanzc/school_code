@@ -6,8 +6,15 @@ use Model\UsuarioModel;
 use Model\VO\UsuarioVO;
 
 final class LoginController extends Controller {
+    public function __construct() {
+        parent::__construct(false);
+    }
     public function login() {
         $this->loadView("login");
+    }
+    public function logout() {
+        session_destroy();
+        $this->redirect("login.php");
     }
     public function fazerLogin() {
         $vo = new UsuarioVO(0, $_POST["login"], $_POST["senha"]);

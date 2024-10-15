@@ -14,7 +14,7 @@ final class UsuarioModel extends Model {
         $arrayDados = [];
 
         foreach($data as $row) {
-            $vo = new UsuarioVO($row["id"], $row["login"], $row["senha"]);
+            $vo = new UsuarioVO($row["id"], $row["login"], $row["senha"], $row["nivel"]);
             array_push($arrayDados, $vo);
         }
 
@@ -27,13 +27,13 @@ final class UsuarioModel extends Model {
         $binds = ["id" => $vo->getId()];
         $data = $db->select($query, $binds);
 
-        return new UsuarioVO($data[0]["id"], $data[0]["login"], $data[0]["senha"]);
+        return new UsuarioVO($data[0]["id"], $data[0]["login"], $data[0]["senha"], $data[0]["nivel"]);
     }
 
     public function insert($vo) {
         $db = new Connection();
-        $query = "INSERT INTO usuarios VALUES (default, :login, :senha)";
-        $binds = ["login" => $vo->getLogin(), "senha" => md5($vo->getSenha())];
+        $query = "INSERT INTO usuarios VALUES (default, :login, :senha, :nivel)";
+        $binds = ["login" => $vo->getLogin(), "senha" => md5($vo->getSenha()), "nivel" => $vo->getNivel()];
 
         return $db->execute($query, $binds);
     }
@@ -41,15 +41,17 @@ final class UsuarioModel extends Model {
     public function update($vo) {
         $db = new Connection();
         if (empty($vo->getSenha())) {
-            $query = "UPDATE usuarios SET login=:login WHERE id = :id";
+            $query = "UPDATE usuarios SET login=:login, nivel=:nivel WHERE id = :id";
             $binds = [
                 "login" => $vo->getLogin(),
+                "nivel" => $vo->getNivel(),
                 "id" => $vo->getId()    
             ];
         } else {
-            $query = "UPDATE usuarios SET login=:login, senha=:senha WHERE id = :id";
+            $query = "UPDATE usuarios SET login=:login, nivel=:nivel, senha=:senha WHERE id = :id";
             $binds = [
                 "login" => $vo->getLogin(),
+                "nivel" => $vo->getNivel(),
                 "senha" => md5($vo->getSenha()),
                 "id" => $vo->getId()
             ];
@@ -75,7 +77,7 @@ final class UsuarioModel extends Model {
         if (count($data) == 0) {
             return null;
         }
-        $_SESSION["usuario"] = new UsuarioVO($data[0]["id"],$data[0]["login"],$data[0]["senha"]);
+        $_SESSION["usuario"] = new UsuarioVO($data[0]["id"],$data[0]["login"], $data[0]["senha"], $data[0]["nivel"]);
         return $_SESSION["usuario"];
     }
 }
