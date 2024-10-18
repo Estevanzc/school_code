@@ -34,7 +34,12 @@ final class AlunoController extends Controller {
 
     public function save() {
         $id = $_POST["id"];
-        $vo = new AlunoVO($id, $_POST["nome"], $_POST["matricula"]);
+        if (!empty($_FILES["foto"]["name"])) {
+            $extensao = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
+            $nome_arquivo = uniqid() .".". $extensao;
+            move_uploaded_file($_FILES["foto"]["tmp_name"], "uploads/" . $nome_arquivo);
+        }
+        $vo = new AlunoVO($id, $_POST["nome"], $_POST["matricula"], $nome_arquivo);
         $model = new AlunoModel();
 
         if(empty($id)) {

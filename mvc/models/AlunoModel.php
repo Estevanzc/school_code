@@ -14,7 +14,7 @@ final class AlunoModel extends Model {
         $arrayDados = [];
 
         foreach($data as $row) {
-            $vo = new AlunoVO($row["id"], $row["nome"], $row["matricula"]);
+            $vo = new AlunoVO($row["id"], $row["nome"], $row["matricula"], $row["foto"]);
             array_push($arrayDados, $vo);
         }
 
@@ -27,28 +27,47 @@ final class AlunoModel extends Model {
         $binds = ["id" => $vo->getId()];
         $data = $db->select($query, $binds);
 
-        return new AlunoVO($data[0]["id"], $data[0]["nome"], $data[0]["matricula"]);
+        return new AlunoVO($data[0]["id"], $data[0]["nome"], $data[0]["matricula"], $data[0]["foto"]);
     }
 
     public function insert($vo) {
         $db = new Connection();
-        $query = "INSERT INTO alunos (nome, matricula) VALUES (:nome, :matricula)";
-        $binds = [
-            "nome" => $vo->getNome(),
-            "matricula" => $vo->getMatricula()
-        ];
+        if (empty($vo->getFoto())) {
+            $query = "INSERT INTO alunos VALUES (default, :nome, :matricula)";
+            $binds = [
+                "nome" => $vo->getNome(),
+                "matricula" => $vo->getMatricula(),
+            ];
+        } else {
+            $query = "INSERT INTO alunos VALUES (default, :nome, :matricula, :foto)";
+            $binds = [
+                "nome" => $vo->getNome(),
+                "matricula" => $vo->getMatricula(),
+                "foto" => $vo->getFoto()
+            ];
+        }
 
         return $db->execute($query, $binds);
     }
 
     public function update($vo) {
         $db = new Connection();
-        $query = "UPDATE alunos SET nome = :nome, matricula = :matricula WHERE id = :id";
-        $binds = [
-            "nome" => $vo->getNome(),
-            "matricula" => $vo->getMatricula(),
-            "id" => $vo->getId()
-        ];
+        if (empty($vo->getFoto())) {
+            $query = "UPDATE alunos SET nome = :nome, matricula = :matricula WHERE id = :id";
+            $binds = [
+                "nome" => $vo->getNome(),
+                "matricula" => $vo->getMatricula(),
+                "id" => $vo->getId()
+            ];
+        } else {
+            $query = "UPDATE alunos SET nome = :nome, matricula = :matricula, foto=:foto WHERE id = :id";
+            $binds = [
+                "nome" => $vo->getNome(),
+                "matricula" => $vo->getMatricula(),
+                "foto" => $vo->getFoto(),
+                "id" => $vo->getId()
+            ];
+        }
 
         return $db->execute($query, $binds);
     }

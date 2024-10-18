@@ -12,6 +12,7 @@
     <table>
         <tr>
             <th>ID</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>Matrícula</th>
             <th>Ações</th>
@@ -19,6 +20,14 @@
         <?php foreach($alunos as $aluno) { ?>
             <tr>
                 <td><?php echo $aluno->getId(); ?></td>
+                <td><?php if ($aluno->getFoto()) {
+                        ?>
+                        <img src="uploads/<?php echo($aluno->getFoto());?>" alt="<?php echo($aluno->getNome())?>" style="max-width: 200px;">
+                        <?php
+                    } else {
+                        echo("none");
+                    }
+                ?></td>
                 <td><?php echo $aluno->getNome(); ?></td>
                 <td><?php echo $aluno->getMatricula(); ?></td>
                 <td>
