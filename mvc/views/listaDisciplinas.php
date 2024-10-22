@@ -13,12 +13,14 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Ementa</th>
             <th>Ações</th>
         </tr>
         <?php foreach($disciplinas as $disciplina) { ?>
             <tr>
                 <td><?php echo $disciplina->getId(); ?></td>
                 <td><?php echo $disciplina->getNome(); ?></td>
+                <td><a href="uploads/<?php echo $disciplina->getEmenta(); ?>"><?php echo $disciplina->getEmenta(); ?></a></td>
                 <td>
                     <a href="disciplina.php?id=<?php echo $disciplina->getId(); ?>">Editar</a>
                     <br>

@@ -34,7 +34,8 @@ final class DisciplinaController extends Controller {
 
     public function save() {
         $id = $_POST["id"];
-        $vo = new DisciplinaVO($id, $_POST["nome"]);
+        $nome_arquivo = $this->uploadFile($_FILES["ementa"]);
+        $vo = new DisciplinaVO($id, $_POST["nome"], $nome_arquivo);
         $model = new DisciplinaModel();
 
         if(empty($id)) {

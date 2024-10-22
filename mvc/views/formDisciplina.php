@@ -9,9 +9,15 @@
     <?php require_once("views/includes/menu.php");?>
     <h1>Sistema Acadêmico - Cadastro de Disciplina</h1>
     <a href="index.php">Voltar para a listagem</a>
-    <form action="salvarDisciplina.php" method="POST">
+    <form action="salvarDisciplina.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $disciplina->getId(); ?>">
         <input type="text" name="nome" value="<?php echo $disciplina->getNome(); ?>" placeholder="Nome:">
+        <br>
+        <br>
+        <label for="ementa">Ementa (PDF)</label>
+        <br>
+        <input type="file" name="ementa" id="ementa">
+        <br>
         <br>
         <button type="submit">Salvar</button>
     </form>

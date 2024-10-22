@@ -11,6 +11,15 @@ abstract class Controller {
             exit();
         }
     }
+    public function uploadFile($file) {
+        if (empty($file["name"])) {
+            return "";
+        }
+        $extension = pathinfo($file["name"], PATHINFO_EXTENSION);
+        $nome_arquivo = uniqid() .".". $extension;
+        move_uploaded_file($file["tmp_name"], "uploads/" . $nome_arquivo);
+        return $nome_arquivo;
+    }
 
     public function redirect($url) {
         header("Location: " . $url);
