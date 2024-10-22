@@ -28,6 +28,7 @@ CREATE TABLE `alunos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) DEFAULT NULL,
   `matricula` varchar(255) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +39,7 @@ CREATE TABLE `alunos` (
 
 LOCK TABLES `alunos` WRITE;
 /*!40000 ALTER TABLE `alunos` DISABLE KEYS */;
-INSERT INTO `alunos` VALUES (2,'Fulano','123'),(4,'Ciclano ','456'),(5,'Beltrano','789');
+INSERT INTO `alunos` VALUES (2,'Ivan','123','67178601888b2.png'),(4,'Ciclano ','456','6717842ae419f.png'),(5,'Beltrano','789',NULL);
 /*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,8 +53,9 @@ DROP TABLE IF EXISTS `disciplinas`;
 CREATE TABLE `disciplinas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
+  `ementa` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +64,7 @@ CREATE TABLE `disciplinas` (
 
 LOCK TABLES `disciplinas` WRITE;
 /*!40000 ALTER TABLE `disciplinas` DISABLE KEYS */;
-INSERT INTO `disciplinas` VALUES (1,'Programação Web II'),(2,'Geografia'),(5,'Interface Web'),(6,'História');
+INSERT INTO `disciplinas` VALUES (1,'Programação Web II',NULL),(2,'Geografia',NULL),(5,'Interface Web',NULL),(6,'História','67178c2c5355b.pdf'),(8,'abc','67178e107a3d5.pdf');
 /*!40000 ALTER TABLE `disciplinas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,10 +109,10 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `nivel` int DEFAULT 1,
+  `nivel` int(11) DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,6 +121,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (2,'admin','21232f297a57a5a743894a0e4a801fc3',1);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -131,4 +134,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-11 15:45:28
+-- Dump completed on 2024-10-22  9:01:50
