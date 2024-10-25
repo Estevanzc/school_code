@@ -34,9 +34,9 @@ final class AlunoController extends Controller {
 
     public function save() {
         $id = $_POST["id"];
-        $nome_arquivo = $this->uploadFile($_FILES["foto"]);
-        $vo = new AlunoVO($id, $_POST["nome"], $_POST["matricula"], $nome_arquivo);
         $model = new AlunoModel();
+        $nome_arquivo = $this->uploadFile($_FILES["foto"], empty($id) ? "" : $model->selectOne(new AlunoVO($id))->getFoto());
+        $vo = new AlunoVO($id, $_POST["nome"], $_POST["matricula"], $nome_arquivo);
 
         if(empty($id)) {
             $result = $model->insert($vo);
@@ -50,6 +50,7 @@ final class AlunoController extends Controller {
     public function remove() {
         $vo = new AlunoVO($_GET["id"]);
         $model = new AlunoModel();
+        $vo = $model->selectOne($vo);
 
         $result = $model->delete($vo);
 

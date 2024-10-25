@@ -3,6 +3,7 @@
 namespace Model;
 
 use Model\VO\DisciplinaVO;
+use Controller\DisciplinaController;
 
 final class DisciplinaModel extends Model {
 
@@ -62,6 +63,7 @@ final class DisciplinaModel extends Model {
         $db = new Connection();
         $query = "DELETE FROM disciplinas WHERE id = :id";
         $binds = ["id" => $vo->getId()];
+        (new DisciplinaController())->deleteFile($vo->getEmenta());
 
         return $db->execute($query, $binds);
     }
